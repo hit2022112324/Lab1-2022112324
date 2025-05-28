@@ -1,0 +1,33 @@
+# .prospector.yaml
+tools:
+  # 启用哪些底层检查器
+  pylint:     true
+  pyflakes:   true
+  mccabe:     true
+  pep8:       true
+  pydocstyle: true
+  isort:      true
+  radon:      true
+
+# 针对各个工具的细节配置
+pep8:
+  max-line-length: 88
+  ignore: [E203, W503]
+
+pydocstyle:
+  convention: google
+
+pep8-naming: {}
+
+isort:
+  profile: black
+
+radon:
+  min: A       # 只报告复杂度大于 A 级别的函数/类
+  maxCycles: 10
+
+pylint:
+  ignore: [build, dist, .venv]
+  disable:
+    - C0111   # 忽略 missing-docstring（如果你不想强制每个函数都写 docstring）
+    - R0902   # too-many-instance-attributes

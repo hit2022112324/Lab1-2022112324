@@ -1,0 +1,17 @@
+{
+    // 开启 Python 代码检测
+    "python.linting.enabled": true,
+  
+    // 启用 Prospector 作为 lint 工具
+    "python.linting.prospectorEnabled": true,
+  
+    // 如果你有自定义配置文件，就告诉 VSCode 去哪里找：
+    "python.linting.prospectorArgs": [
+      "--config", "${workspaceFolder}/.prospector.yaml"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+      "--rcfile", "${workspaceFolder}/.pylintrc"
+    ]
+  }
+  
